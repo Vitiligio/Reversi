@@ -48,4 +48,8 @@ public class Casillero {
 		}
 	}
 	
+	public Ficha getFicha() {
+		return this.estado.getFicha();
+	}
+	
 }

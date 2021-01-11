@@ -57,10 +57,14 @@ public class Tablero {
 	public boolean estaOcupado(char letra, int numero) {
 		int letraTraducida = this.traducirLetra(letra);
 		numero = this.traducirNumero(numero);
-		return this.tablero[letraTraducida][numero].estaOcupado();
+		return this.estaOcupado(letraTraducida, numero);
 	}
 	
-	private int traducirLetra(char letra) throws LetraNoValidaExcepcion {
+	public boolean estaOcupado(int letra, int numero) {
+		return this.tablero[letra][numero].estaOcupado();
+	}
+	
+	public int traducirLetra(char letra) throws LetraNoValidaExcepcion {
 		switch(letra) {
 			case 'A':
 				return 0;
@@ -83,7 +87,7 @@ public class Tablero {
 		}
 	}
 	
-	private int traducirNumero(int numero) {
+	public int traducirNumero(int numero) {
 		return (numero - 1);
 	}
 	
@@ -119,5 +123,12 @@ public class Tablero {
 		return this.tablero[letra][numero].tieneFichaBlanca();
 	}
 
+	public void cambiarColor(int letra, int numero) {
+		this.tablero[letra][numero].cambiarColor();
+	}
+	
+	public Ficha getFicha(int letra, int numero) {
+		return this.tablero[letra][numero].getFicha();
+	}
 	
 }

@@ -34,4 +34,9 @@ public class EstadoOcupado extends EstadoCasillero{
 	public void cambiarColor() {
 		this.ficha = this.ficha.cambiarColor();
 	}
+	
+	public Ficha getFicha(){
+		Ficha ficha = this.ficha.getFicha();
+		return ficha;
+	}
 }

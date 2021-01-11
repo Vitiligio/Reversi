@@ -12,4 +12,8 @@ public class FichaNegra extends Ficha{
 	public Ficha cambiarColor() {
 		return new FichaBlanca();
 	}
+	
+	public Ficha getFicha() {
+		return new FichaNegra();
+	}
 }

@@ -1,5 +1,6 @@
 package src;
 
+import excepciones.NoHayFichaExcepcion;
 import excepciones.NoSePuedeCambiarColorExcepcion;
 import excepciones.YaEstaVacioExcepcion;
 
@@ -28,5 +29,9 @@ public class EstadoVacio extends EstadoCasillero {
 	
 	public void cambiarColor() throws NoSePuedeCambiarColorExcepcion {
 		throw new NoSePuedeCambiarColorExcepcion();
+	}
+	
+	public Ficha getFicha() throws NoHayFichaExcepcion{
+		throw new NoHayFichaExcepcion();
 	}
 }
